@@ -1,31 +1,30 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="Site en réalisation" />
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div class="wrapper">
+    <Header></Header>
+    <div class="main">
+      <RouterView></RouterView>
     </div>
-  </header>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+.wrapper {
+  display: grid;
+} 
 
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  grid-row: 2;
 }
 
 nav a.router-link-exact-active {
