@@ -4,12 +4,6 @@
   font-weight: normal;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(98, 81%, 49%, 0.2);
-  }
-}
-
 @media (min-width: 1024px) {
   body {
   }

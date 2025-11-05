@@ -1,4 +1,10 @@
+<script setup>
+import Header from './Header.vue';
+
+</script>
+
 <template>
+  <Header />
   <div class="about">
     <h1>This is an about page</h1>
   </div>
