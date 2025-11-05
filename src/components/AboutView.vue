@@ -6,16 +6,20 @@ import Header from './Header.vue';
 <template>
   <Header />
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Je suis entrain de réaliser mon site portfolio, il seras prêt d'ici le 12 - 13 novembre</h1>
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.about__title {
+  font-size: 30px;
 }
 </style>

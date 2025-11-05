@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <img class="header_logo" src="/src/assets/text.svg" alt="" />
+    <img class="header__logo" src="/src/assets/text.svg" alt="" />
     <div class="header__right">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -12,7 +12,7 @@
 .header {
   overflow: hidden;
   padding: 20px 10px;
-  background: var(--vt-c-divider-light-1); 
+  background: var(--vt-c-divider-light-2); 
   justify-content: space-between;
   display: flex;
   border-radius: 2px;
