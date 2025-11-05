@@ -6,7 +6,7 @@ import Header from './Header.vue';
 <template>
   <Header />
   <div class="about">
-    <h1>Je suis entrain de réaliser mon site portfolio, il seras prêt d'ici le 12 - 13 novembre</h1>
+    <h1>Je suis entrain de réaliser mon site portfolio, il sera prêt d'ici le 12 - 13 novembre.</h1>
   </div>
 </template>
 
