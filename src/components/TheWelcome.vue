@@ -1,26 +1,55 @@
 <script setup>
-
+import { onMounted } from 'vue';
+onMounted(() => {
+  document.querySelector(".welcome").classList.add("anim")
+})
 
 </script>
 
 <template>
   <div class="welcome">
-    <div class="nine">
+    <img class="welcome__img"></img>
+    <div class="welcome__title welcome--fade">
       <h1>TOSCANO Léo<span>Welcome to my site</span></h1>
     </div>
-    <div class="welcome__btn">
+    <div class="welcome__btn welcome--fade">
       <router-link to="/about">Let's get started</router-link>
     </div>
   </div>
 </template>
 
 <style scoped>
+.welcome--fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .welcome {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.welcome.anim {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .welcome__title {
@@ -52,6 +81,7 @@
 .welcome__btn {
   font-size: 18px; 
   line-height: 25px;
+  animation-delay: 0.6s;
 }
 
 h1 {
@@ -77,11 +107,12 @@ h1 em {
   font-weight: 600;
 }
 
-.nine h1 {
+.welcome__title h1 {
   text-align:center; font-size:50px; text-transform:uppercase; color:#ffffff; letter-spacing:1px;
   font-family:"Playfair Display", serif; font-weight:400;
+  animation-delay : 0.3s;
 }
-.nine h1 span {
+.welcome__title h1 span {
   margin-top: 5px;
     font-size:15px; color:#ffffff; word-spacing:1px; font-weight:normal; letter-spacing:2px;
     text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
@@ -93,13 +124,12 @@ h1 em {
     align-items: center;
 }
 
-.nine h1 span:after,.nine h1 span:before {
+.welcome__title h1 span:after,.welcome__title h1 span:before {
     content: " ";
     display: block;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
     height: 5px;
-  background-color:#f8f8f8;
 }
 
 </style>
