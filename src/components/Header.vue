@@ -4,6 +4,8 @@
     <div class="header__right">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
+      <router-link to="/project">Projects</router-link>
+      <router-link to="/about">About</router-link>
     </div>
   </div>
 </template>
@@ -20,7 +22,7 @@
 
 .header a {
   float: left;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 12px;
   text-decoration: none;

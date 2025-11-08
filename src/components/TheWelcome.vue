@@ -25,11 +25,12 @@
 
 .welcome__title {
   font-size: 30px;
+  color: antiquewhite;
 }
 
 .welcome a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 .welcome a.active {
@@ -39,7 +40,7 @@
 
 .welcome a {
   float: left;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -77,12 +78,12 @@ h1 em {
 }
 
 .nine h1 {
-  text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
+  text-align:center; font-size:50px; text-transform:uppercase; color:#ffffff; letter-spacing:1px;
   font-family:"Playfair Display", serif; font-weight:400;
 }
 .nine h1 span {
   margin-top: 5px;
-    font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+    font-size:15px; color:#ffffff; word-spacing:1px; font-weight:normal; letter-spacing:2px;
     text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
 
     display: grid;

@@ -12,6 +12,7 @@ import Header from './Header.vue';
 
 <style>
 .about {
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
