@@ -1,3 +1,6 @@
+<script setup>
+</script>
+
 <template>
   <div class="header">
     <img class="header__logo" src="/src/assets/text.svg" alt="" />

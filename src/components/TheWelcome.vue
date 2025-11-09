@@ -1,5 +1,7 @@
 <script setup>
 import { onMounted } from 'vue';
+import { RouterLink } from 'vue-router';
+import { aboutPage } from '@/router';
 onMounted(() => {
   document.querySelector(".welcome").classList.add("anim")
 })
@@ -13,7 +15,7 @@ onMounted(() => {
       <h1>TOSCANO Léo<span>Welcome to my site</span></h1>
     </div>
     <div class="welcome__btn welcome--fade">
-      <router-link to="/about">Let's get started</router-link>
+      <button @click="aboutPage">Let's get started</button>
     </div>
   </div>
 </template>
@@ -57,25 +59,27 @@ onMounted(() => {
   color: antiquewhite;
 }
 
-.welcome a:hover {
+.welcome button:hover {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
 }
 
-.welcome a.active {
+.welcome button.active {
   background-color: dodgerblue;
   color: white;
 }
 
-.welcome a {
+.welcome button {
   float: left;
   color: rgb(255, 255, 255);
+  background: 0;
   text-align: center;
   padding: 12px;
   text-decoration: none;
   font-size: 18px; 
   line-height: 25px;
-  border-radius: 4px;
+  border: 0;
+  border-radius: 5px;
 }
 
 .welcome__btn {
