@@ -27,19 +27,19 @@ const router = createRouter({
 export function aboutPage() {
   setTimeout(() => {
     router.push("/about");
-  }, "1000");
+  }, "800");
 }
 
 export function homePage() {
   setTimeout(() => {
     router.push("/");
-  }, "1000");
+  }, "800");
 }
 
 export function projectPage() {
   setTimeout(() => {
     router.push("/about");
-  }, "1000");
+  }, "800");
 }
 
 

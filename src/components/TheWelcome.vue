@@ -1,21 +1,32 @@
 <script setup>
-import { onMounted } from 'vue';
-import { RouterLink } from 'vue-router';
+import { ref, onMounted } from 'vue';
 import { aboutPage } from '@/router';
+const welcome = ref(null);
+const animDone = ref(false);
+
 onMounted(() => {
-  document.querySelector(".welcome").classList.add("anim")
+  welcome.value?.classList.add('anim')
 })
+
+function handleClick() {
+  if (animDone.value) return;
+  animDone.value = ref(true);
+  const elem = welcome.value;
+  elem?.classList.add('anim-out');
+
+  animDone.value = ref(true) ? aboutPage() : true
+}
 
 </script>
 
 <template>
-  <div class="welcome">
+  <div ref="welcome" class="welcome">
     <img class="welcome__img"></img>
     <div class="welcome__title welcome--fade">
       <h1>TOSCANO Léo<span>Welcome to my site</span></h1>
     </div>
     <div class="welcome__btn welcome--fade">
-      <button @click="aboutPage">Let's get started</button>
+      <button @click="handleClick">Let's get started</button>
     </div>
   </div>
 </template>
@@ -52,6 +63,12 @@ onMounted(() => {
 .welcome.anim {
   opacity: 1;
   transform: translateY(0);
+}
+
+.welcome.anim-out {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.6s ease-in;
 }
 
 .welcome__title {

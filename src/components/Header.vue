@@ -1,19 +1,70 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+import { aboutPage, homePage } from '@/router';
+const header = ref(null);
+const animDone = ref(false);
+
+onMounted(() => {
+  header.value?.classList.add('anim')
+})
+
+function handleClickHome() {
+  if (animDone.value) return;
+  animDone.value = ref(true);
+  const elem = header.value;
+  elem?.classList.add('anim-out');
+
+  animDone.value = ref(true) ? homePage() : true
+}
+
 </script>
 
 <template>
-  <div class="header">
-    <img class="header__logo" src="/src/assets/text.svg" alt="" />
-    <div class="header__right">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/project">Projects</router-link>
-      <router-link to="/about">About</router-link>
+  <div ref="header" class="wrapper">
+    <div class="header header--fade">
+      <img class="header__logo" src="/src/assets/text.svg" alt="" />
+      <div class="header__right">
+        <button @click="handleClickHome">Home</button>
+        <button @click="handleClick">About</button>
+        <button @click="handleClick">Projects</button>
+        <button @click="handleClick">About</button>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header--fade {
+  opacity: 0;
+  transform: translateY(0);
+  animation: fadeIn 0.8s forwards;
+}
+
+.wrapper {
+  transition: all 0.8s ease-out;
+}
+
+.wrapper.anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wrapper.anim-out {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.6s ease-in;
+}
+
 .header {
   overflow: hidden;
   padding: 20px 10px;
@@ -23,7 +74,7 @@
   border-radius: 2px;
 }
 
-.header a {
+.header button {
   float: left;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -32,6 +83,8 @@
   font-size: 18px; 
   line-height: 25px;
   border-radius: 4px;
+  background: 0;
+  border: 0;
 }
 
 .header__logo {
@@ -40,12 +93,12 @@
   margin-left: 5vh;
 }
 
-.header a:hover {
+.header button:hover {
   background-color: #ddd;
   color: black;
 }
 
-.header a.active {
+.header button.active {
   background-color: dodgerblue;
   color: white;
 }
