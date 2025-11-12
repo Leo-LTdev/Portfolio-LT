@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { aboutPage, homePage, projectPage, contactPage } from '@/router';
+import { eventBus } from '../main.js';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 const header = ref(null);
 const animDone = ref(false);
 
@@ -14,7 +17,7 @@ function handleClickHome() {
   const elem = header.value;
   elem?.classList.add('anim-out');
 
-  animDone.value = ref(true) ? homePage() : true
+  navigateWithExit(homePage());
 }
 
 function handleClickAbout() {
@@ -23,7 +26,7 @@ function handleClickAbout() {
   const elem = header.value;
   elem?.classList.add('anim-out');
 
-  animDone.value = ref(true) ? aboutPage() : true
+  navigateWithExit(aboutPage());
 }
 
 function handleClickProj() {
@@ -32,7 +35,7 @@ function handleClickProj() {
   const elem = header.value;
   elem?.classList.add('anim-out');
 
-  animDone.value = ref(true) ? projectPage() : true
+  navigateWithExit(projectPage());
 }
 
 function handleClickContact() {
@@ -41,7 +44,11 @@ function handleClickContact() {
   const elem = header.value;
   elem?.classList.add('anim-out');
 
-  animDone.value = ref(true) ? contactPage() : true
+  navigateWithExit(contactPage());
+}
+
+function navigateWithExit(path) {
+  eventBus.dispatchEvent(new CustomEvent('route-change-request'));
 }
 
 </script>

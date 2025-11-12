@@ -1,5 +1,6 @@
 import './assets/main.css'
 
+export const eventBus = new EventTarget();
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
