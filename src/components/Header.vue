@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { aboutPage, homePage, projectPage } from '@/router';
-import ContactPage from './ContactPage.vue';
+import { aboutPage, homePage, projectPage, contactPage } from '@/router';
 const header = ref(null);
 const animDone = ref(false);
 
