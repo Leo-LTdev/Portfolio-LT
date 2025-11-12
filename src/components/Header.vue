@@ -22,6 +22,7 @@ function handleClickHome() {
 
 function handleClickAbout() {
   if (animDone.value) return;
+  if (router.currentRoute.value.path === "/about") return;
   animDone.value = ref(true);
   const elem = header.value;
   elem?.classList.add('anim-out');
@@ -31,6 +32,7 @@ function handleClickAbout() {
 
 function handleClickProj() {
   if (animDone.value) return;
+  if (router.currentRoute.value.path === "/project") return;
   animDone.value = ref(true);
   const elem = header.value;
   elem?.classList.add('anim-out');
@@ -40,6 +42,7 @@ function handleClickProj() {
 
 function handleClickContact() {
   if (animDone.value) return;
+  if (router.currentRoute.value.path === "/contact") return;
   animDone.value = ref(true);
   const elem = header.value;
   elem?.classList.add('anim-out');
