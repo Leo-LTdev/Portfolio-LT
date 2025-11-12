@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { aboutPage, homePage } from '@/router';
+import { aboutPage, homePage, projectPage } from '@/router';
+import ContactPage from './ContactPage.vue';
 const header = ref(null);
 const animDone = ref(false);
 
@@ -17,6 +18,33 @@ function handleClickHome() {
   animDone.value = ref(true) ? homePage() : true
 }
 
+function handleClickAbout() {
+  if (animDone.value) return;
+  animDone.value = ref(true);
+  const elem = header.value;
+  elem?.classList.add('anim-out');
+
+  animDone.value = ref(true) ? aboutPage() : true
+}
+
+function handleClickProj() {
+  if (animDone.value) return;
+  animDone.value = ref(true);
+  const elem = header.value;
+  elem?.classList.add('anim-out');
+
+  animDone.value = ref(true) ? projectPage() : true
+}
+
+function handleClickContact() {
+  if (animDone.value) return;
+  animDone.value = ref(true);
+  const elem = header.value;
+  elem?.classList.add('anim-out');
+
+  animDone.value = ref(true) ? contactPage() : true
+}
+
 </script>
 
 <template>
@@ -25,9 +53,9 @@ function handleClickHome() {
       <img class="header__logo" src="/src/assets/text.svg" alt="" />
       <div class="header__right">
         <button @click="handleClickHome">Home</button>
-        <button @click="handleClick">About</button>
-        <button @click="handleClick">Projects</button>
-        <button @click="handleClick">About</button>
+        <button @click="handleClickAbout">About</button>
+        <button @click="handleClickProj">Projects</button>
+        <button @click="handleClickContact">Contact</button>
       </div>
     </div>
   </div>

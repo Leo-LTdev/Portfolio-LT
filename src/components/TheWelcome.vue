@@ -135,22 +135,22 @@ h1 em {
 }
 .welcome__title h1 span {
   margin-top: 5px;
-    font-size:15px; color:#ffffff; word-spacing:1px; font-weight:normal; letter-spacing:2px;
-    text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+  font-size:15px; color:#ffffff; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+  text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
 
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
-    grid-gap: 20px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
 }
 
 .welcome__title h1 span:after,.welcome__title h1 span:before {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    height: 5px;
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  height: 5px;
 }
 
 </style>

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from "../components/AboutView.vue"
 import ProjectPage from '@/components/ProjectPage.vue';
+import ContactPage from '../components/ContactPage.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,9 +18,14 @@ const router = createRouter({
       component: AboutView,
     },
     {
-      path: '/proj',
-      name: 'proj',
+      path: '/project',
+      name: 'project',
       component: ProjectPage,
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactPage,
     },
   ],
 })
@@ -38,7 +44,13 @@ export function homePage() {
 
 export function projectPage() {
   setTimeout(() => {
-    router.push("/about");
+    router.push("/project");
+  }, "800");
+}
+
+export function contactPage() {
+  setTimeout(() => {
+    router.push("/contact");
   }, "800");
 }
 
