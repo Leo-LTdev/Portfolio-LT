@@ -1,59 +1,58 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import { aboutPage, homePage, projectPage, contactPage } from '@/router';
-import { eventBus } from '../main.js';
-import { useRouter } from 'vue-router';
-const router = useRouter();
-const header = ref(null);
-const animDone = ref(false);
+import { ref, onMounted } from 'vue'
+import { aboutPage, homePage, projectPage, contactPage } from '@/router'
+import { eventBus } from '../main.js'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const header = ref(null)
+const animDone = ref(false)
 
 onMounted(() => {
   header.value?.classList.add('anim')
 })
 
 function handleClickHome() {
-  if (animDone.value) return;
-  animDone.value = ref(true);
-  const elem = header.value;
-  elem?.classList.add('anim-out');
+  if (animDone.value) return
+  animDone.value = ref(true)
+  const elem = header.value
+  elem?.classList.add('anim-out')
 
-  navigateWithExit(homePage());
+  navigateWithExit(homePage())
 }
 
 function handleClickAbout() {
-  if (animDone.value) return;
-  if (router.currentRoute.value.path === "/about") return;
-  animDone.value = ref(true);
-  const elem = header.value;
-  elem?.classList.add('anim-out');
+  if (animDone.value) return
+  if (router.currentRoute.value.path === '/about') return
+  animDone.value = ref(true)
+  const elem = header.value
+  elem?.classList.add('anim-out')
 
-  navigateWithExit(aboutPage());
+  navigateWithExit(aboutPage())
 }
 
 function handleClickProj() {
-  if (animDone.value) return;
-  if (router.currentRoute.value.path === "/project") return;
-  animDone.value = ref(true);
-  const elem = header.value;
-  elem?.classList.add('anim-out');
+  if (animDone.value) return
+  if (router.currentRoute.value.path === '/project') return
+  animDone.value = ref(true)
+  const elem = header.value
+  elem?.classList.add('anim-out')
 
-  navigateWithExit(projectPage());
+  navigateWithExit(projectPage())
 }
 
 function handleClickContact() {
-  if (animDone.value) return;
-  if (router.currentRoute.value.path === "/contact") return;
-  animDone.value = ref(true);
-  const elem = header.value;
-  elem?.classList.add('anim-out');
+  if (animDone.value) return
+  if (router.currentRoute.value.path === '/contact') return
+  animDone.value = ref(true)
+  const elem = header.value
+  elem?.classList.add('anim-out')
 
-  navigateWithExit(contactPage());
+  navigateWithExit(contactPage())
 }
 
-function navigateWithExit(path) {
-  eventBus.dispatchEvent(new CustomEvent('route-change-request'));
+function navigateWithExit() {
+  eventBus.dispatchEvent(new CustomEvent('route-change-request'))
 }
-
 </script>
 
 <template>
@@ -71,7 +70,6 @@ function navigateWithExit(path) {
 </template>
 
 <style scoped>
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -105,7 +103,7 @@ function navigateWithExit(path) {
 .header {
   overflow: hidden;
   padding: 20px 10px;
-  background: var(--vt-c-divider-light-2); 
+  background: var(--vt-c-divider-light-2);
   justify-content: space-between;
   display: flex;
   border-radius: 2px;
@@ -117,7 +115,7 @@ function navigateWithExit(path) {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
   background: 0;
@@ -141,7 +139,7 @@ function navigateWithExit(path) {
 }
 
 .header__right {
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
 }
 
@@ -150,13 +148,13 @@ function navigateWithExit(path) {
     float: none;
     display: flex;
     text-align: left;
-    font-size: 15px; 
+    font-size: 15px;
     line-height: 13px;
     border-radius: 4px;
   }
 
   .header__logo {
-    margin-left:1vh ;
+    margin-left: 1vh;
   }
 }
 </style>
