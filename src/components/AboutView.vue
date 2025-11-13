@@ -52,17 +52,19 @@ onBeforeUnmount(() => {
     <h2 class="skills__title skills--fade">Mes compétences</h2>
     <div class="skills__container skills--fade">
       <div class="skills__icons skills--fade">
-        <img src="" alt="HTML" />
-        <img src="" alt="CSS" />
-        <img src="" alt="JavaScript" />
-        <img src="" alt="Vue.js" />
-        <img src="" alt="Node.js" />
+        <img src="/src/assets/htmlcss.png" alt="HTML CSS" />
+        <img src="/src/assets/js.png" alt="JS" />
+        <img src="/src/assets/vue.png" alt="Vue.js" />
+        <img src="/src/assets/react.png" alt="React" />
+        <img src="/src/assets/lua.png" alt="Lua" />
+        <img src="/src/assets/python.png" alt="Python" />
+        <img src="/src/assets/golang.png" alt="Golang" />
+        <img src="/src/assets/java.png" alt="Java" />
       </div>
       <div class="skills__text skills--fade">
         <p>
           Je maîtrise plusieurs langages et frameworks, me permettant de créer des applications
-          performantes et modernes. Je suis particulièrement à l’aise avec le développement
-          front-end et full-stack.
+          performantes et modernes. Je suis particulièrement à l’aise en développement full-stack.
         </p>
       </div>
     </div>
@@ -180,6 +182,7 @@ onBeforeUnmount(() => {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  max-width: 300px;
 }
 
 .skills__icons img {
