@@ -4,10 +4,12 @@ import Header from './Header.vue'
 import { eventBus } from '../main.js'
 
 const about = ref(null)
+const skills = ref(null)
 
 function startExitAnimation() {
-  if (!about.value) return
+  if (!about.value || !skills.value) return
   about.value.classList.add('anim-out')
+  skills.value.classList.add('anim-out')
 }
 
 function onRouteChangeRequest() {
@@ -25,9 +27,9 @@ onBeforeUnmount(() => {
 
 <template>
   <Header />
-  <div ref="about" class="wrapper">
-    <div class="about about--fade">
-      <h1 class="about__title about--fade">I'm <span>Léo TOSCANO</span></h1>
+  <div ref="about" class="about">
+    <div class="about__container about--fade">
+      <h1 class="about__title about--fade">Je suis <span>Léo TOSCANO</span></h1>
       <p>
         Je m’appelle Léo Toscano, étudiant en Bachelor 2 Informatique à Ynov Lyon. Passionné par le
         développement depuis mes 12 ans, j’aime concevoir des applications et des jeux alliant
@@ -46,9 +48,30 @@ onBeforeUnmount(() => {
     </div>
     <img class="about__img about--fade" src="/src/assets/IL_08890.jpg" />
   </div>
+  <div ref="skills" class="skills">
+    <h2 class="skills__title skills--fade">Mes compétences</h2>
+    <div class="skills__container skills--fade">
+      <div class="skills__icons skills--fade">
+        <img src="" alt="HTML" />
+        <img src="" alt="CSS" />
+        <img src="" alt="JavaScript" />
+        <img src="" alt="Vue.js" />
+        <img src="" alt="Node.js" />
+      </div>
+      <div class="skills__text skills--fade">
+        <p>
+          Je maîtrise plusieurs langages et frameworks, me permettant de créer des applications
+          performantes et modernes. Je suis particulièrement à l’aise avec le développement
+          front-end et full-stack.
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
+/*Animations départ*/
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -58,13 +81,29 @@ onBeforeUnmount(() => {
   }
 }
 
-.about--fade {
+.about--fade,
+.skills--fade {
   opacity: 0;
   transform: translateY(0);
   animation: fadeIn 0.8s forwards;
 }
 
-.wrapper {
+/*Animations fin*/
+
+.skills.anim,
+.about.anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills.anim-out,
+.about.anim-out {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.6s ease-in;
+}
+
+.about {
   transition: all 0.8s ease-out;
   padding: 80px 40px;
   display: flex;
@@ -76,22 +115,11 @@ onBeforeUnmount(() => {
   color: #fff;
 }
 
-.wrapper.anim {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.wrapper.anim-out {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: all 0.6s ease-in;
-}
-
-.about {
+.about__container {
   flex: 1;
 }
 
-.about p {
+.about__container p {
   line-height: 1.6;
   font-size: 1.1rem;
   color: #e0e0e0;
@@ -125,6 +153,56 @@ onBeforeUnmount(() => {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
+.skills {
+  padding: 80px 40px;
+  background-color: #121212;
+  color: #fff;
+}
+
+.skills__title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #5ccfe6;
+  text-align: center;
+}
+
+.skills__container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skills__icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills__icons img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skills__icons img:hover {
+  transform: scale(1.2);
+}
+
+.skills__text {
+  max-width: 500px;
+}
+
+.skills__text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
 @media (max-width: 600px) {
   .about {
     flex-direction: column-reverse;
@@ -143,6 +221,20 @@ onBeforeUnmount(() => {
 
   .about__title {
     font-size: 2rem;
+  }
+
+  .skills__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .skills__text {
+    text-align: center;
+  }
+
+  .skills__icons img {
+    margin: 10px;
   }
 }
 </style>

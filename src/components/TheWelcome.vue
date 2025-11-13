@@ -21,10 +21,10 @@ function handleClick() {
 <template>
   <div ref="welcome" class="welcome">
     <div class="welcome__title welcome--fade">
-      <h1>TOSCANO Léo<span>Welcome to my site</span></h1>
+      <h1>TOSCANO Léo<span>Bienvenue sur mon site</span></h1>
     </div>
     <div class="welcome__btn welcome--fade">
-      <button @click="handleClick">Let's get started</button>
+      <button @click="handleClick">Démarrer</button>
     </div>
   </div>
 </template>
