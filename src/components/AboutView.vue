@@ -27,12 +27,14 @@ onBeforeUnmount(() => {
   <Header />
   <div ref="about" class="wrapper">
     <div class="about about--fade">
-      <h1>About Me</h1>
+      <h1>I'm Léo TOSCANO</h1>
+      <p>a bachelor 2nd year student</p>
     </div>
+    <img class="about__img" src="/src/assets/IL_08890.jpg" />
   </div>
 </template>
 
-<style>
+<style scoped>
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -50,6 +52,10 @@ onBeforeUnmount(() => {
 
 .wrapper {
   transition: all 0.8s ease-out;
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper.anim {
@@ -66,12 +72,38 @@ onBeforeUnmount(() => {
 .about {
   color: white;
   display: flex;
-  flex-direction: column;
+  padding: 50px 20px;
   align-items: center;
-  padding-top: 2%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2%;
 }
 
 .about__title {
   font-size: 30px;
+}
+
+.about__img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (max-width: 600px) {
+  .about__img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.about__img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 </style>

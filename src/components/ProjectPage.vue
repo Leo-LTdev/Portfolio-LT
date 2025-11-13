@@ -1,26 +1,26 @@
 <script setup>
-import Header from './Header.vue';
-import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { eventBus } from '../main.js';
+import Header from './Header.vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { eventBus } from '../main.js'
 
-const projects = ref(null);
+const projects = ref(null)
 
 function startExitAnimation() {
-  if (!projects.value) return;
-  projects.value.classList.add('anim-out');
+  if (!projects.value) return
+  projects.value.classList.add('anim-out')
 }
 
 function onRouteChangeRequest(e) {
-  startExitAnimation();
+  startExitAnimation()
 }
 
 onMounted(() => {
-  eventBus.addEventListener('route-change-request', onRouteChangeRequest);
-});
+  eventBus.addEventListener('route-change-request', onRouteChangeRequest)
+})
 
 onBeforeUnmount(() => {
-  eventBus.removeEventListener('route-change-request', onRouteChangeRequest);
-});
+  eventBus.removeEventListener('route-change-request', onRouteChangeRequest)
+})
 </script>
 
 <template>
@@ -42,9 +42,7 @@ onBeforeUnmount(() => {
   </div>
 </template>
 
-<style>
-
-
+<style scoped>
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -75,7 +73,6 @@ onBeforeUnmount(() => {
   transition: all 0.6s ease-in;
 }
 
-
 .projects {
   padding: 2rem;
 }
@@ -90,7 +87,7 @@ onBeforeUnmount(() => {
 }
 
 .projects__title {
-  color:white;
+  color: white;
   display: flex;
   justify-content: center;
 }
@@ -99,13 +96,15 @@ onBeforeUnmount(() => {
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card__title {

@@ -1,27 +1,25 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import { aboutPage } from '@/router';
-const welcome = ref(null);
-const animDone = ref(false);
+import { ref, onMounted } from 'vue'
+import { aboutPage } from '@/router'
+const welcome = ref(null)
+const animDone = ref(false)
 
 onMounted(() => {
   welcome.value?.classList.add('anim')
 })
 
 function handleClick() {
-  if (animDone.value) return;
-  animDone.value = ref(true);
-  const elem = welcome.value;
-  elem?.classList.add('anim-out');
+  if (animDone.value) return
+  animDone.value = ref(true)
+  const elem = welcome.value
+  elem?.classList.add('anim-out')
 
   animDone.value = ref(true) ? aboutPage() : true
 }
-
 </script>
 
 <template>
   <div ref="welcome" class="welcome">
-    <img class="welcome__img"></img>
     <div class="welcome__title welcome--fade">
       <h1>TOSCANO Léo<span>Welcome to my site</span></h1>
     </div>
@@ -93,14 +91,14 @@ function handleClick() {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border: 0;
   border-radius: 5px;
 }
 
 .welcome__btn {
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   animation-delay: 0.6s;
 }
@@ -109,7 +107,7 @@ h1 {
   position: relative;
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 40px;
   color: #080808;
@@ -129,14 +127,25 @@ h1 em {
 }
 
 .welcome__title h1 {
-  text-align:center; font-size:50px; text-transform:uppercase; color:#ffffff; letter-spacing:1px;
-  font-family:"Playfair Display", serif; font-weight:400;
-  animation-delay : 0.3s;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  animation-delay: 0.3s;
 }
 .welcome__title h1 span {
   margin-top: 5px;
-  font-size:15px; color:#ffffff; word-spacing:1px; font-weight:normal; letter-spacing:2px;
-  text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+  font-size: 15px;
+  color: #ffffff;
+  word-spacing: 1px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
 
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
@@ -145,12 +154,12 @@ h1 em {
   align-items: center;
 }
 
-.welcome__title h1 span:after,.welcome__title h1 span:before {
-  content: " ";
+.welcome__title h1 span:after,
+.welcome__title h1 span:before {
+  content: ' ';
   display: block;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
   height: 5px;
 }
-
 </style>

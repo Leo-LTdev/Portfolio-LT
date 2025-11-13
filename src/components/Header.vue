@@ -56,7 +56,7 @@ function navigateWithExit() {
 </script>
 
 <template>
-  <div ref="header" class="wrapper">
+  <div ref="header" class="wrapper-header">
     <div class="header header--fade">
       <img class="header__logo" src="/src/assets/text.svg" alt="" />
       <div class="header__right">
@@ -85,16 +85,16 @@ function navigateWithExit() {
   animation: fadeIn 0.8s forwards;
 }
 
-.wrapper {
+.wrapper-header {
   transition: all 0.8s ease-out;
 }
 
-.wrapper.anim {
+.wrapper-header.anim {
   opacity: 1;
   transform: translateY(0);
 }
 
-.wrapper.anim-out {
+.wrapper-header.anim-out {
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.6s ease-in;
