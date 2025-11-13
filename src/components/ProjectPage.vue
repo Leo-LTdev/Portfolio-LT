@@ -27,7 +27,7 @@ onBeforeUnmount(() => {
   <Header />
   <div ref="projects" class="wrapper">
     <section class="projects projects--fade" id="projects">
-      <h1 class="projects__title">Mes projets</h1>
+      <h1 class="projects__title">Mes projets seront disponible dans très peu de temps</h1>
       <div class="projects__grid">
         <div class="project-card">
           <h3 class="project-card__title">A venir...</h3>

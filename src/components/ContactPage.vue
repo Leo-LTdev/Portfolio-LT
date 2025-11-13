@@ -28,7 +28,7 @@ onBeforeUnmount(() => {
   <div ref="contact" class="wrapper">
     <div class="contact contact--fade">
       <h1>En cours</h1>
-      <p>Disponible prochainement</p>
+      <p>Message disponible prochainement</p>
     </div>
   </div>
 </template>
