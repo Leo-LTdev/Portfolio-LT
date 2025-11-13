@@ -60,9 +60,9 @@ function navigateWithExit() {
     <div class="header header--fade">
       <img class="header__logo" src="/src/assets/text.svg" alt="" />
       <div class="header__right">
-        <button @click="handleClickHome">Home</button>
-        <button @click="handleClickAbout">About</button>
-        <button @click="handleClickProj">Projects</button>
+        <button @click="handleClickHome">Accueil</button>
+        <button @click="handleClickAbout">A propos</button>
+        <button @click="handleClickProj">Projets</button>
         <button @click="handleClickContact">Contact</button>
       </div>
     </div>

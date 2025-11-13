@@ -1,38 +1,39 @@
 <script setup>
-import Header from './Header.vue';
-import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { eventBus } from '../main.js';
+import Header from './Header.vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { eventBus } from '../main.js'
 
-const contact = ref(null);
+const contact = ref(null)
 
 function startExitAnimation() {
-  if (!contact.value) return;
-  contact.value.classList.add('anim-out');
+  if (!contact.value) return
+  contact.value.classList.add('anim-out')
 }
 
 function onRouteChangeRequest(e) {
-  startExitAnimation();
+  startExitAnimation()
 }
 
 onMounted(() => {
-  eventBus.addEventListener('route-change-request', onRouteChangeRequest);
-});
+  eventBus.addEventListener('route-change-request', onRouteChangeRequest)
+})
 
 onBeforeUnmount(() => {
-  eventBus.removeEventListener('route-change-request', onRouteChangeRequest);
-});
+  eventBus.removeEventListener('route-change-request', onRouteChangeRequest)
+})
 </script>
 
 <template>
   <Header />
   <div ref="contact" class="wrapper">
     <div class="contact contact--fade">
+      <h1>En cours</h1>
+      <p>Disponible prochainement</p>
     </div>
   </div>
 </template>
 
 <style>
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -61,5 +62,15 @@ onBeforeUnmount(() => {
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.6s ease-in;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  color: white;
+  padding: 1rem;
 }
 </style>

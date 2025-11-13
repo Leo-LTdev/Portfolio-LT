@@ -10,7 +10,7 @@ function startExitAnimation() {
   projects.value.classList.add('anim-out')
 }
 
-function onRouteChangeRequest(e) {
+function onRouteChangeRequest() {
   startExitAnimation()
 }
 
@@ -30,12 +30,28 @@ onBeforeUnmount(() => {
       <h1 class="projects__title">Mes projets</h1>
       <div class="projects__grid">
         <div class="project-card">
-          <h3 class="project-card__title">Projet 1</h3>
+          <h3 class="project-card__title">A venir...</h3>
           <p class="project-card__desc">Une application Vue.js avec une interface minimaliste.</p>
         </div>
         <div class="project-card">
-          <h3 class="project-card__title">Projet 2</h3>
-          <p class="project-card__desc">Un jeu web simple et amusant développé avec JavaScript.</p>
+          <h3 class="project-card__title">A venir...</h3>
+          <p class="project-card__desc"></p>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">A venir...</h3>
+          <p class="project-card__desc"></p>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">A venir...</h3>
+          <p class="project-card__desc"></p>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">A venir...</h3>
+          <p class="project-card__desc"></p>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">A venir...</h3>
+          <p class="project-card__desc"></p>
         </div>
       </div>
     </section>
@@ -80,22 +96,27 @@ onBeforeUnmount(() => {
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  column-gap: 22rem;
+  row-gap: 3.5rem;
   max-width: 1000px;
   margin: 0 auto;
   padding: 1rem;
+  justify-items: center;
 }
 
 .projects__title {
   color: white;
   display: flex;
   justify-content: center;
+  padding: 1rem;
 }
 
 .project-card {
-  background-color: #fff;
-  padding: 1.5rem;
+  background-color: #121212;
+  color: white;
+  padding: 2.5rem;
   border-radius: 12px;
+  width: 600px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition:
     transform 0.3s,
@@ -108,7 +129,21 @@ onBeforeUnmount(() => {
 }
 
 .project-card__title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   color: #007bff;
+}
+
+.project-card__desc {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .projects__grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px));
+    gap: 3rem;
+  }
+  .project-card {
+    width: 400px;
+  }
 }
 </style>
