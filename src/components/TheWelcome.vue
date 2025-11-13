@@ -74,6 +74,30 @@ function handleClick() {
   color: antiquewhite;
 }
 
+.welcome__img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (max-width: 600px) {
+  .welcome__img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.welcome__img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
 .welcome button:hover {
   background-color: #ffffff;
   color: rgb(0, 0, 0);

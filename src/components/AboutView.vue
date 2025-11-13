@@ -27,10 +27,24 @@ onBeforeUnmount(() => {
   <Header />
   <div ref="about" class="wrapper">
     <div class="about about--fade">
-      <h1>I'm Léo TOSCANO</h1>
-      <p>a bachelor 2nd year student</p>
+      <h1 class="about__title about--fade">I'm <span>Léo TOSCANO</span></h1>
+      <p>
+        Je m’appelle Léo Toscano, étudiant en Bachelor 2 Informatique à Ynov Lyon. Passionné par le
+        développement depuis mes 12 ans, j’aime concevoir des applications et des jeux alliant
+        performance, créativité et expérience utilisateur.
+      </p>
+      <p>
+        Autodidacte à mes débuts, j’ai ensuite consolidé mes compétences à travers ma formation et
+        de nombreux projets concrets. J’aime relever des défis techniques, apprendre de nouvelles
+        technologies et améliorer en permanence la qualité de mon code.
+      </p>
+      <p>
+        Mon objectif est de devenir un développeur logiciel capable de créer des solutions
+        innovantes, utiles et bien pensées, tout en continuant à progresser dans un environnement
+        stimulant et collaboratif.
+      </p>
     </div>
-    <img class="about__img" src="/src/assets/IL_08890.jpg" />
+    <img class="about__img about--fade" src="/src/assets/IL_08890.jpg" />
   </div>
 </template>
 
@@ -52,10 +66,14 @@ onBeforeUnmount(() => {
 
 .wrapper {
   transition: all 0.8s ease-out;
-  padding: 50px 20px;
+  padding: 80px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #fff;
 }
 
 .wrapper.anim {
@@ -70,17 +88,24 @@ onBeforeUnmount(() => {
 }
 
 .about {
-  color: white;
-  display: flex;
-  padding: 50px 20px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2%;
+  flex: 1;
+}
+
+.about p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 15px;
 }
 
 .about__title {
-  font-size: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.about__title span {
+  color: #5ccfe6;
 }
 
 .about__img {
@@ -95,15 +120,29 @@ onBeforeUnmount(() => {
     box-shadow 0.25s ease;
 }
 
-@media (max-width: 600px) {
-  .about__img {
-    width: 180px;
-    height: 180px;
-  }
-}
-
 .about__img:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about__content {
+    max-width: 90%;
+  }
+
+  .about__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about__title {
+    font-size: 2rem;
+  }
 }
 </style>
