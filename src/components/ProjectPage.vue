@@ -27,7 +27,7 @@ onBeforeUnmount(() => {
   <Header />
   <div ref="projects" class="wrapper">
     <section class="projects projects--fade" id="projects">
-      <h1 class="projects__title">Mes projets seront disponible dans très peu de temps</h1>
+      <h1 class="projects__title">Mes projets</h1>
       <div class="projects__grid">
         <div class="project-card">
           <h3 class="project-card__title">A venir...</h3>
@@ -46,12 +46,35 @@ onBeforeUnmount(() => {
           <p class="project-card__desc"></p>
         </div>
         <div class="project-card">
-          <h3 class="project-card__title">A venir...</h3>
-          <p class="project-card__desc"></p>
+          <h3 class="project-card__title">Forum - GO, JS & SQLITE</h3>
+          <p>
+            Réalisation d'un Forum autour de l'escalade via HTML, CSS, React, JS, SQLITE et Golang.
+            Les fonctionalités principale du forum sont :
+          </p>
+          <li>Réalisation d'une API pour gérer les likes. Api réalisé via Mux en Golang</li>
+          <li>Création de compte avec des normes de sécurité</li>
+          <li>Gestion du profil et compte complète et intuitive</li>
+          <li>Création de posts et commentaires</li>
+          <p>Ce projet à été réalisé en 2025 a Ynov</p>
+          <a href="https://github.com/corentin-cpp/Forum">Lien vers le Github</a>
         </div>
         <div class="project-card">
-          <h3 class="project-card__title">A venir...</h3>
-          <p class="project-card__desc"></p>
+          <h3 class="project-card__title">Hangman - GO Web</h3>
+          <p>
+            Réalisation d'un jeu de pendu en WEB utilisant le language GO, HTML et CSS. Les
+            fonctionalités principale du jeu sont :
+          </p>
+          <li>
+            Choix de la difficulté : Trois niveaux disponibles avec words.txt, words2.txt et
+            words3.txt avec des fichiers de mots différents.
+          </li>
+          <li>
+            Sauvegarde et chargement : La partie peut être sauvegardée et chargée à tout moment.
+          </li>
+          <li>ASCII art : Visuel propre avec l'affichage du pendu</li>
+          <li>UI : Simple et intuitif</li>
+          <p>Ce projet à été réalisé en 2024 a Ynov</p>
+          <a href="https://github.com/Stiximir/Hangman-GO-Web">Lien vers le Github</a>
         </div>
       </div>
     </section>
@@ -115,12 +138,29 @@ onBeforeUnmount(() => {
   background-color: #121212;
   color: white;
   padding: 2.5rem;
+  height: auto;
   border-radius: 12px;
+  border-style: double;
+  border-color: #0000006c;
   width: 600px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition:
     transform 0.3s,
     box-shadow 0.3s;
+}
+
+.project-card a {
+  display: flex;
+  margin-top: 1rem;
+  color: #007bff;
+  font: bold;
+  justify-content: center;
+}
+
+.project-card li,
+.project-card p {
+  display: flex;
+  margin-top: 0.3rem;
 }
 
 .project-card:hover {
@@ -131,10 +171,6 @@ onBeforeUnmount(() => {
 .project-card__title {
   margin-bottom: 1.5rem;
   color: #007bff;
-}
-
-.project-card__desc {
-  color: white;
 }
 
 @media (max-width: 600px) {
