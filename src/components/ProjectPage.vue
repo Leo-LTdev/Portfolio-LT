@@ -30,51 +30,135 @@ onBeforeUnmount(() => {
       <h1 class="projects__title">Mes projets</h1>
       <div class="projects__grid">
         <div class="project-card">
-          <h3 class="project-card__title">A venir...</h3>
-          <p class="project-card__desc">Une application Vue.js avec une interface minimaliste.</p>
-        </div>
-        <div class="project-card">
-          <h3 class="project-card__title">A venir...</h3>
-          <p class="project-card__desc"></p>
-        </div>
-        <div class="project-card">
-          <h3 class="project-card__title">A venir...</h3>
-          <p class="project-card__desc"></p>
-        </div>
-        <div class="project-card">
-          <h3 class="project-card__title">A venir...</h3>
-          <p class="project-card__desc"></p>
-        </div>
-        <div class="project-card">
-          <h3 class="project-card__title">Forum - GO, JS & SQLITE</h3>
+          <h3 class="project-card__title">Forum d'escalade</h3>
           <p>
             Réalisation d'un Forum autour de l'escalade via HTML, CSS, React, JS, SQLITE et Golang.
-            Les fonctionalités principale du forum sont :
           </p>
-          <li>Réalisation d'une API pour gérer les likes. Api réalisé via Mux en Golang</li>
-          <li>Création de compte avec des normes de sécurité</li>
-          <li>Gestion du profil et compte complète et intuitive</li>
-          <li>Création de posts et commentaires</li>
-          <p>Ce projet à été réalisé en 2025 a Ynov</p>
-          <a href="https://github.com/corentin-cpp/Forum">Lien vers le Github</a>
+          <p>Fonctionalités principales :</p>
+          <ul>
+            <li>Réalisation d'une API pour gérer les likes. Api réalisé via Mux en Golang</li>
+            <li>Création de compte avec des normes de sécurité recommandé par la CNIL</li>
+            <li>Gestion du profil et du compte complète et intuitive</li>
+            <li>Création de posts et commentaires</li>
+          </ul>
+          <p>Ce projet à été réalisé en 2025 a Ynov en groupe de 5</p>
+          <a href="https://github.com/corentin-cpp/Forum" target="_blank"> Lien vers le Github </a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">Site Portfolio – Vue.js</h3>
+          <p>
+            Développement d’un site portfolio moderne en utilisant les technologies Vue.js,
+            JavaScript, HTML, CSS et un environnement Node.js / Vite pour le tooling et la
+            compilation.
+          </p>
+          <p>Fonctionnalités principales :</p>
+          <ul>
+            <li>Routing dynamique avec Vue Router (navigation sans rechargement de page)</li>
+            <li>Composants réutilisables pour une structure propre et évolutive</li>
+            <li>Transitions et animations fluides entre les pages</li>
+            <li>Design responsive pour une compatibilité mobile et desktop</li>
+            <li>Déploiement sur un hébergement OVH</li>
+          </ul>
+          <p>Ce projet a été réalisé en 2025 en autonomie.</p>
+          <a href="https://github.com/Stiximir/Portfolio-LT" target="_blank">
+            Lien vers le GitHub
+          </a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">Groupie-Tracker - Mini-jeux WEB</h3>
+          <p>
+            Concevoir une plateforme web codée en Go et HTML/CSS, Sqlite, avec JavaScript utilisé
+            uniquement pour la gestion du temps réel.
+          </p>
+          <p>Fonctionalités principales :</p>
+          <ul>
+            <li>Créer et gérer des comptes utilisateurs</li>
+            <li>Lancer et rejoindre des jeux multijoueurs</li>
+            <li>Intégrer des APIs externes pour récupérer des informations musicales</li>
+            <li>Jouer au Deaf Test, Blind Test et Petit BAC</li>
+          </ul>
+          <p>Ce projet a été réalisé en 2025 à Ynov en groupe de 5.</p>
+          <a href="https://github.com/Stiximir/Groupie-tracker" target="_blank">
+            Lien vers le GitHub
+          </a>
         </div>
         <div class="project-card">
           <h3 class="project-card__title">Hangman - GO Web</h3>
+          <p>Réalisation d'un jeu de pendu en WEB utilisant le language GO, HTML et CSS.</p>
+          <p>Fonctionalités principales :</p>
+          <ul>
+            <li>
+              Choix de la difficulté : Trois niveaux disponibles avec words.txt, words2.txt et
+              words3.txt avec des fichiers de mots différents.
+            </li>
+            <li>
+              Sauvegarde et chargement : La partie peut être sauvegardée et chargée à tout moment.
+            </li>
+            <li>ASCII art : Visuel propre avec l'affichage du pendu</li>
+            <li>UI : Simple et intuitif</li>
+          </ul>
+          <p>Ce projet à été réalisé en 2024 a Ynov seul</p>
+          <a href="https://github.com/Stiximir/Hangman-GO-Web" target="_blank">
+            Lien vers le Github
+          </a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">Réseau de trains - Java</h3>
+          <p>Réalisation d'un réseau de trains fait en Java programmation orienté objet.</p>
+          <p>Fonctionalités principales :</p>
+          <ul>
+            <li>Créer des trains, ajouter des wagons et en retirer.</li>
+            <li>Différents types de wagons (voitures et marchandise) et la locomotive.</li>
+            <li>Gares disponibles pour le déplacement.</li>
+            <li>Menu complet en console pour la gestion.</li>
+          </ul>
+          <p>Ce projet a été réalisé en 2025 à Ynov seul</p>
+          <a href="" target="_blank"> Lien vers le GitHub (à venir)</a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">Projets JavaScript</h3>
           <p>
-            Réalisation d'un jeu de pendu en WEB utilisant le language GO, HTML et CSS. Les
-            fonctionalités principale du jeu sont :
+            Réalisation de multiples projets JavaScript (Sortable, Boxxle, Rhythm Frenzy) visant à
+            développer la logique, l’algorithmie et la création d’interfaces interactives.
           </p>
-          <li>
-            Choix de la difficulté : Trois niveaux disponibles avec words.txt, words2.txt et
-            words3.txt avec des fichiers de mots différents.
-          </li>
-          <li>
-            Sauvegarde et chargement : La partie peut être sauvegardée et chargée à tout moment.
-          </li>
-          <li>ASCII art : Visuel propre avec l'affichage du pendu</li>
-          <li>UI : Simple et intuitif</li>
-          <p>Ce projet à été réalisé en 2024 a Ynov</p>
-          <a href="https://github.com/Stiximir/Hangman-GO-Web">Lien vers le Github</a>
+          <p>Fonctionalités principales :</p>
+          <ul>
+            <li>Manipulation avancée du DOM</li>
+            <li>Architecture modulaire en JS</li>
+          </ul>
+          <p>Projets réalisés en 2025 à Ynov.</p>
+          <a href="" target="_blank">Lien vers le GitHub (à venir)</a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">Projets Lua (Garry's Mod)</h3>
+          <p>
+            Modification et création d’addons pour Garry's Mod en Lua. Travail basé sur la
+            personnalisation de mécaniques de jeu et la création d’interfaces in-game.
+          </p>
+          <p>Fonctionalités principales :</p>
+          <ul>
+            <li>Création de systèmes d’addons personnalisés</li>
+            <li>Interaction avec l’API du moteur Source</li>
+            <li>Conception d’interfaces utilisateur in-game</li>
+            <li>Scripts orientés gameplay</li>
+          </ul>
+          <p>Projets réalisés en autonomie entre 2022 et 2024.</p>
+        </div>
+        <div class="project-card">
+          <h3 class="project-card__title">Bot Discord – Python</h3>
+          <p>
+            Développement d’un bot Discord en Python utilisant la librairie discord.py, capable de
+            gérer des commandes, des profils utilisateurs et des fonctionnalités automatisées.
+          </p>
+          <p>Fonctionalités principales :</p>
+          <ul>
+            <li>Gestion des utilisateurs et permissions</li>
+            <li>Système d'administration</li>
+          </ul>
+          <p>Projet réalisé en 2021 en autonomie.</p>
+          <a href="https://github.com/Stiximir/Discord-bot" target="_blank">
+            Lien vers le GitHub
+          </a>
         </div>
       </div>
     </section>
@@ -135,7 +219,7 @@ onBeforeUnmount(() => {
 }
 
 .project-card {
-  background-color: #121212;
+  background-color: rgba(255, 255, 255, 0.05);
   color: white;
   padding: 2.5rem;
   height: auto;
@@ -173,9 +257,32 @@ onBeforeUnmount(() => {
   color: #007bff;
 }
 
+@media (max-width: 1300px) {
+  .projects__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .project-card {
+    width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .projects__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .project-card {
+    width: 600px;
+  }
+}
+
 @media (max-width: 600px) {
   .projects__grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px));
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
   }
   .project-card {
