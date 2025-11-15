@@ -1,32 +1,45 @@
-# 🧱 Portfolio-LT - Portfolio personnel expérience professionnel
+# 🧱 Portfolio-LT - Portfolio personnel expérience professionnelle
 
 > Portfolio personnel pour mettre en avant mon expérience
 
 ## 🚀 Objectif
 
-- Présenter mes projets via un support WEB
+- Présenter mes projets via un support web
 - Trouver une alternance
-  
+
 ## ⚙️ Stack technique
 
-A déterminer
+- **Front-end :** Vue.js, HTML, CSS, JavaScript
+- **Outils & Environnement :** Node.js, Vite
+- **Déploiement :** VPS personnel, domaine personnalisé
 
 ## 🧩 Structure du projet
 
-A déterminer
+Le projet est structuré autour de composants Vue.js réutilisables pour une meilleure maintenance et évolutivité. La navigation est gérée avec Vue Router pour un routing dynamique.
 
 ## 🛠️ Installation & exécution
 
-- Déploiement sur un VPS personnel et utilisation d'un domaine
+Le projet peut être exécuté localement ou déployé sur un VPS personnel.
 
-### Prérequis :
+### Prérequis
 
-A déterminer
+- npm
+- Accès à un VPS ou serveur local pour le déploiement
 
-### Étapes :
+### Étapes pour exécution locale
 
-A déterminer
+1. Cloner le repository :
+   ```bash
+   git clone https://github.com/Stiximir/Portfolio-LT.git
+   ```
+2. Installer les dépendances :
 
-### Accès local :
+   ```bash
+   npm install
+   ```
 
-http://localhost:8000
+3. Lancer le serveur local :
+
+   ```bash
+   npm run dev
+   ```
