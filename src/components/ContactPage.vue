@@ -1,5 +1,5 @@
 <script setup>
-import Header from './Header.vue'
+import HeaderPage from './HeaderPage.vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { eventBus } from '../main.js'
 
@@ -24,13 +24,13 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Header />
+  <HeaderPage />
   <div ref="contact" class="wrapper">
     <div class="contact contact--fade">
       <h1>Formulaire bientôt disponible</h1>
       <p>Mes réseaux :</p>
       <ul>
-        <a href="https://github.com/Stiximir" target="_blank"> <li>Github</li> </a>
+        <a href="https://github.com/Leo-LTdev" target="_blank"> <li>Github</li> </a>
         <a href="https://www.linkedin.com/in/l%C3%A9o-toscano-146925341/" target="_blank">
           <li>LinkedIn</li>
         </a>

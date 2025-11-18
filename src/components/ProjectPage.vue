@@ -1,5 +1,5 @@
 <script setup>
-import Header from './Header.vue'
+import HeaderPage from './HeaderPage.vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { eventBus } from '../main.js'
 
@@ -24,7 +24,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Header />
+  <HeaderPage />
   <div ref="projects" class="wrapper">
     <section class="projects projects--fade" id="projects">
       <h1 class="projects__title">Mes projets</h1>
@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
             <li>Déploiement sur un hébergement OVH</li>
           </ul>
           <p>Ce projet a été réalisé en 2025 en autonomie.</p>
-          <a href="https://github.com/Stiximir/Portfolio-LT" target="_blank">
+          <a href="https://github.com/Leo-LTdev/Portfolio-LT" target="_blank">
             Lien vers le GitHub
           </a>
         </div>
@@ -78,7 +78,7 @@ onBeforeUnmount(() => {
             <li>Jouer au Deaf Test, Blind Test et Petit BAC</li>
           </ul>
           <p>Ce projet a été réalisé en 2025 à Ynov en groupe de 5.</p>
-          <a href="https://github.com/Stiximir/Groupie-tracker" target="_blank">
+          <a href="https://github.com/Leo-LTdev/Groupie-tracker" target="_blank">
             Lien vers le GitHub
           </a>
         </div>
@@ -98,7 +98,7 @@ onBeforeUnmount(() => {
             <li>UI : Simple et intuitif</li>
           </ul>
           <p>Ce projet à été réalisé en 2024 a Ynov seul</p>
-          <a href="https://github.com/Stiximir/Hangman-GO-Web" target="_blank">
+          <a href="https://github.com/Leo-LTdev/Hangman-GO-Web" target="_blank">
             Lien vers le Github
           </a>
         </div>
@@ -156,7 +156,7 @@ onBeforeUnmount(() => {
             <li>Système d'administration</li>
           </ul>
           <p>Projet réalisé en 2021 en autonomie.</p>
-          <a href="https://github.com/Stiximir/Discord-bot" target="_blank">
+          <a href="https://github.com/Leo-LTdev/Discord-bot" target="_blank">
             Lien vers le GitHub
           </a>
         </div>

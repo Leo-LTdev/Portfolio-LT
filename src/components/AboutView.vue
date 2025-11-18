@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
-import Header from './Header.vue'
+import HeaderPage from './HeaderPage.vue'
 import { eventBus } from '../main.js'
 
 const about = ref(null)
@@ -26,7 +26,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Header />
+  <HeaderPage />
   <div ref="about" class="about">
     <div class="about__container about--fade">
       <h1 class="about__title about--fade">Je suis <span>Léo TOSCANO</span></h1>
