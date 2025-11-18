@@ -24,7 +24,7 @@ function handleClick() {
       <h1>TOSCANO Léo<span>Bienvenue sur mon site</span></h1>
     </div>
     <div class="welcome__btn welcome--fade">
-      <button @click="handleClick">Démarrer</button>
+      <button @click="handleClick">Découvrir mes projets</button>
     </div>
   </div>
 </template>
