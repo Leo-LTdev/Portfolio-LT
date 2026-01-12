@@ -46,7 +46,11 @@ onBeforeUnmount(() => {
         stimulant et collaboratif.
       </p>
     </div>
-    <img class="about__img about--fade" src="/src/assets/IL_08890-DpAgbvee.webp" loading="lazy" />
+    <img
+      class="about__img about--fade"
+      src="/src/assets/IL_08890-DpAgbvee-CzEq7kEt.webp"
+      loading="lazy"
+    />
   </div>
   <div ref="skills" class="skills">
     <h2 class="skills__title skills--fade">Mes compétences</h2>
