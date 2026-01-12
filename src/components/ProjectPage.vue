@@ -27,7 +27,7 @@ onBeforeUnmount(() => {
   <HeaderPage />
   <div ref="projects" class="wrapper">
     <section class="projects projects--fade" id="projects">
-      <h1 class="projects__title">Mes projets</h1>
+      <h1 class="projects__title">Projets</h1>
       <div class="projects__grid">
         <div class="project-card">
           <h3 class="project-card__title">Forum d'escalade</h3>
@@ -236,7 +236,7 @@ onBeforeUnmount(() => {
 .project-card a {
   display: flex;
   margin-top: 1rem;
-  color: #007bff;
+  color: #009cff;
   font: bold;
   justify-content: center;
 }
@@ -254,7 +254,7 @@ onBeforeUnmount(() => {
 
 .project-card__title {
   margin-bottom: 1.5rem;
-  color: #007bff;
+  color: #009cff;
 }
 
 @media (max-width: 1300px) {

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { aboutPage, homePage, projectPage, contactPage } from '@/router'
+import { aboutPage, projectPage, contactPage } from '@/router'
 import { eventBus } from '../main.js'
 import { useRouter } from 'vue-router'
 const router = useRouter()
@@ -10,15 +10,6 @@ const animDone = ref(false)
 onMounted(() => {
   header.value?.classList.add('anim')
 })
-
-function handleClickHome() {
-  if (animDone.value) return
-  animDone.value = ref(true)
-  const elem = header.value
-  elem?.classList.add('anim-out')
-
-  navigateWithExit(homePage())
-}
 
 function handleClickAbout() {
   if (animDone.value) return
@@ -60,7 +51,6 @@ function navigateWithExit() {
     <div class="header header--fade">
       <img class="header__logo" src="/src/assets/text.svg" alt="" />
       <div class="header__right">
-        <button @click="handleClickHome">Accueil</button>
         <button @click="handleClickAbout">A propos</button>
         <button @click="handleClickProj">Projets</button>
         <button @click="handleClickContact">Contact</button>

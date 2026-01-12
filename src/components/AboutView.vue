@@ -46,20 +46,20 @@ onBeforeUnmount(() => {
         stimulant et collaboratif.
       </p>
     </div>
-    <img class="about__img about--fade" src="/src/assets/IL_08890.jpg" />
+    <img class="about__img about--fade" src="/src/assets/IL_08890-DpAgbvee.webp" loading="lazy" />
   </div>
   <div ref="skills" class="skills">
     <h2 class="skills__title skills--fade">Mes compétences</h2>
     <div class="skills__container skills--fade">
       <div class="skills__icons skills--fade">
-        <img src="/src/assets/htmlcss.png" alt="HTML CSS" />
-        <img src="/src/assets/js.png" alt="JS" />
-        <img src="/src/assets/vue.png" alt="Vue.js" />
-        <img src="/src/assets/react.png" alt="React" />
-        <img src="/src/assets/lua.png" alt="Lua" />
-        <img src="/src/assets/python.png" alt="Python" />
-        <img src="/src/assets/golang.png" alt="Golang" />
-        <img src="/src/assets/java.png" alt="Java" />
+        <img src="/src/assets/htmlcss-Bz_kb_nP.webp" alt="HTML CSS" />
+        <img src="/src/assets/js-BBvHBHph.webp" alt="JS" />
+        <img src="/src/assets/vue-DrX0Z5OQ.webp" alt="Vue.js" />
+        <img src="/src/assets/react-CQj2UL-H.webp" alt="React" />
+        <img src="/src/assets/lua-DaabaA2w.webp" alt="Lua" />
+        <img src="/src/assets/python-CWs16vkG.webp" alt="Python" />
+        <img src="/src/assets/golang-Duwt-Nir.webp" alt="Golang" />
+        <img src="/src/assets/java-N89b0Xwv.webp" alt="Java" />
       </div>
       <div class="skills__text skills--fade">
         <p>

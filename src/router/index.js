@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from "../components/AboutView.vue"
-import ProjectPage from '@/components/ProjectPage.vue';
-import ContactPage from '../components/ContactPage.vue';
+import AboutView from '../components/AboutView.vue'
+import ProjectPage from '@/components/ProjectPage.vue'
+import ContactPage from '../components/ContactPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,27 +32,20 @@ const router = createRouter({
 
 export function aboutPage() {
   setTimeout(() => {
-    router.push("/about");
-  }, "800");
-}
-
-export function homePage() {
-  setTimeout(() => {
-    router.push("/");
-  }, "800");
+    router.push('/about')
+  }, '800')
 }
 
 export function projectPage() {
   setTimeout(() => {
-    router.push("/project");
-  }, "800");
+    router.push('/project')
+  }, '800')
 }
 
 export function contactPage() {
   setTimeout(() => {
-    router.push("/contact");
-  }, "800");
+    router.push('/contact')
+  }, '800')
 }
-
 
 export default router
