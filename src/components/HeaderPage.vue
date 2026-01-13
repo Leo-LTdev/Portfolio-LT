@@ -62,7 +62,7 @@ function navigateWithExit() {
 <style scoped>
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 0.00001;
   }
   to {
     opacity: 1;
@@ -70,7 +70,7 @@ function navigateWithExit() {
 }
 
 .header--fade {
-  opacity: 0;
+  opacity: 0.00001;
   transform: translateY(0);
   animation: fadeIn 0.8s forwards;
 }
