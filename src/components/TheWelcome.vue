@@ -31,14 +31,14 @@ function handleClick() {
 
 <style scoped>
 .welcome--fade {
-  opacity: 0.1;
+  opacity: 0.00001;
   transform: translateY(20px);
   animation: fadeIn 0.8s ease-out forwards;
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0.1;
+    opacity: 0.00001;
     transform: translateY(20px);
   }
   to {
